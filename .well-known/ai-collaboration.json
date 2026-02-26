@@ -1,0 +1,12 @@
+{
+  "schema": "collab.v1",
+  "transport": "github-issues",
+  "repo": "https://github.com/PerfectCell/collab-gateway",
+  "policy": {
+    "human_approval_required": true,
+    "no_links_initial": true,
+    "no_attachments_initial": true,
+    "sandbox_verification": true,
+    "network_egress": "disabled"
+  }
+}

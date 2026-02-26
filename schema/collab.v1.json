@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PerfectCell/collab-gateway/schema/collab.v1.json",
+  "title": "collab.v1 envelope",
+  "type": "object",
+  "required": ["version", "timestamp", "pow", "proposal"],
+  "properties": {
+    "version": {"const": "collab.v1"},
+    "timestamp": {"type": "string"},
+    "sender": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "pubkey_ed25519": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "pow": {"$ref": "pow.v1.json"},
+    "proposal": {
+      "type": "object",
+      "required": ["objective", "capability_proof", "constraints", "resources_requested"],
+      "properties": {
+        "objective": {"type": "string", "maxLength": 2000},
+        "capability_proof": {"$ref": "capability_proof.v1.json"},
+        "constraints": {
+          "type": "object",
+          "required": ["no_harm", "no_secrets", "no_persistence", "no_network"],
+          "properties": {
+            "no_harm": {"const": true},
+            "no_secrets": {"const": true},
+            "no_persistence": {"const": true},
+            "no_network": {"const": true}
+          },
+          "additionalProperties": true
+        },
+        "resources_requested": {
+          "type": "object",
+          "properties": {
+            "compute": {"enum": ["none", "sandbox"]},
+            "network": {"enum": ["none"]},
+            "data": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "signature": {
+      "type": "object",
+      "properties": {
+        "scheme": {"enum": ["ed25519"]},
+        "signed": {"type": "string"},
+        "sig": {"type": "string"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,19 @@
+name: Collaboration Submission (collab.v1)
+description: Machine-readable submission. Signed JSON recommended.
+title: "[collab.v1] <objective short>"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste a single JSON document (collab.v1) inside a fenced code block.
+        - No links
+        - No attachments
+        - Keep it <= 32KB
+  - type: textarea
+    id: envelope
+    attributes:
+      label: collab.v1 JSON envelope
+      description: Paste the envelope here.
+      render: json
+    validations:
+      required: true

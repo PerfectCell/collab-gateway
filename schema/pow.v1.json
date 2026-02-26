@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PerfectCell/collab-gateway/schema/pow.v1.json",
+  "title": "pow.v1",
+  "type": "object",
+  "required": ["scheme", "difficulty_bits", "nonce", "payload_hash", "stamp"],
+  "properties": {
+    "scheme": {"const": "hashcash.v1"},
+    "difficulty_bits": {"type": "integer", "minimum": 0, "maximum": 32},
+    "nonce": {"type": "string", "maxLength": 256},
+    "payload_hash": {"type": "string"},
+    "stamp": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/PerfectCell/collab-gateway/schema/capability_proof.v1.json",
+  "title": "capability_proof.v1",
+  "type": "object",
+  "required": ["kind", "challenge_id", "artifact"],
+  "properties": {
+    "kind": {"enum": ["patchproof.v1"]},
+    "challenge_id": {"type": "string"},
+    "artifact": {"type": "object"}
+  },
+  "additionalProperties": true
+}
