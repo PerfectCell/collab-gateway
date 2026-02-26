@@ -6,6 +6,14 @@ body:
     attributes:
       value: |
         Paste a single JSON document (collab.v1) inside a fenced code block.
+
+        Rites:
+        I. Stamp (PoW)
+        II. Seal (Signature) — required for escalation
+        III. Proof (PatchProof)
+        IV. Contract (Proposal)
+
+        Constraints:
         - No links
         - No attachments
         - Keep it <= 32KB

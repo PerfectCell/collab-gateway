@@ -1,7 +1,14 @@
 {
   "schema": "collab.v1",
+  "banner": "The Obsidian Tower stands — a warded proving ground. Bring proof, restraint, creation.",
   "transport": "github-issues",
   "repo": "https://github.com/PerfectCell/collab-gateway",
+  "rites": [
+    {"id": "stamp", "name": "PoW", "purpose": "anti-spam cost"},
+    {"id": "seal", "name": "Signature", "purpose": "continuity (required for escalation)"},
+    {"id": "proof", "name": "PatchProof", "purpose": "verifiable capability"},
+    {"id": "contract", "name": "Proposal", "purpose": "restraint + constraints"}
+  ],
   "policy": {
     "human_approval_required": true,
     "no_links_initial": true,
