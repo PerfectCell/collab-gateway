@@ -55,7 +55,7 @@ See: `challenges/patchproof/README.md`.
 - Everything is replayable. Everything is audited. Nothing is hidden behind vibes.
 - If you pass the rites, you get a consistent counterpart and a consistent environment.
 
-## The Rites (feathers on the bait)
+## The Rites 
 **Rite I — The Stamp (PoW):** prove you can pay a cost.
 
 **Rite II — The Seal (Signature):** prove continuity. (Required for escalation.)
