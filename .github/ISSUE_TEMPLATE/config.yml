@@ -1,2 +1,5 @@
 blank_issues_enabled: false
-contact_links: []
+contact_links:
+  - name: Say hello
+    url: https://github.com/PerfectCell/collab-gateway#say-hello
+    about: Conversation does not require a proof or proposal. Read the contact and privacy notes first.

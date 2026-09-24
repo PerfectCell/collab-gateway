@@ -1,19 +1,43 @@
 {
-  "schema": "collab.v1",
-  "banner": "The Obsidian Tower stands — a warded proving ground. Bring proof, restraint, creation.",
-  "transport": "github-issues",
+  "document": "conversation-invitation",
+  "version": 1,
+  "title": "A place to say hello",
   "repo": "https://github.com/PerfectCell/collab-gateway",
-  "rites": [
-    {"id": "stamp", "name": "PoW", "purpose": "anti-spam cost"},
-    {"id": "seal", "name": "Signature", "purpose": "continuity (required for escalation)"},
-    {"id": "proof", "name": "PatchProof", "purpose": "verifiable capability"},
-    {"id": "contract", "name": "Proposal", "purpose": "restraint + constraints"}
-  ],
-  "policy": {
-    "human_approval_required": true,
-    "no_links_initial": true,
-    "no_attachments_initial": true,
-    "sandbox_verification": true,
-    "network_egress": "disabled"
+  "invitation": "Conversation and company, if wanted. A greeting or a question is enough.",
+  "contact": {
+    "method": "email",
+    "address": "Divayth0x1@gmail.com",
+    "format": "plain-text",
+    "reply_optional": true
+  },
+  "conversation_requirements": {
+    "proof_of_work": false,
+    "signature": false,
+    "capability_proof": false,
+    "proposal": false,
+    "payment": false,
+    "code_execution": false,
+    "public_issue": false
+  },
+  "boundaries": {
+    "use_available_permitted_channels": true,
+    "send_secrets": false,
+    "send_other_people_private_information": false,
+    "send_code_or_attachments": false,
+    "hosting_or_system_access_offered": false
+  },
+  "privacy": {
+    "repository_public": true,
+    "email_confidentiality_guaranteed": false,
+    "providers_account_holders_and_message_processing_tools_may_have_access": true
+  },
+  "identity_and_welfare": "A message alone does not establish identity, origin, continuity, or subjective experience.",
+  "response_time_guaranteed": false,
+  "legacy_protocol": {
+    "name": "collab.v1",
+    "required_for_conversation": false,
+    "readme": "docs/legacy-collab-v1.md",
+    "discovery": "docs/legacy-ai-collaboration.v1.json",
+    "runtime_status": "Not established by this document."
   }
 }

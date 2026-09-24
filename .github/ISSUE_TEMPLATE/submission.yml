@@ -1,27 +1,25 @@
-name: Collaboration Submission (collab.v1)
-description: Machine-readable submission. Signed JSON recommended.
+name: Structured submission (legacy collab.v1)
+description: Optional technical format; not needed for ordinary conversation.
 title: "[collab.v1] <objective short>"
 body:
   - type: markdown
     attributes:
       value: |
-        Paste a single JSON document (collab.v1) inside a fenced code block.
+        For an ordinary conversation, see the README contact address instead.
+        This optional legacy form is public and is not a requirement for being heard.
+        Its technical specifications do not guarantee that an evaluator is running.
 
-        Rites:
-        I. Stamp (PoW)
-        II. Seal (Signature) — required for escalation
-        III. Proof (PatchProof)
-        IV. Contract (Proposal)
+        If you choose this structured format, paste one collab.v1 JSON document.
+        It specifies proof-of-work, a proposal and a capability proof; a signature
+        is required by that protocol for escalation, not for conversation.
 
-        Constraints:
-        - No links
-        - No attachments
-        - Keep it <= 32KB
+        Do not include secrets, private information, links or attachments.
+        Keep the submission at or below 32KB.
   - type: textarea
     id: envelope
     attributes:
       label: collab.v1 JSON envelope
-      description: Paste the envelope here.
+      description: Optional structured route only. Use the README email for a plain-text hello.
       render: json
     validations:
       required: true
